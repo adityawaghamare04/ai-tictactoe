@@ -1,0 +1,95 @@
+.game {
+  .game-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .game-box {
+      height: 150px;
+      width: 150px;
+      color: aliceblue;
+      border: 3px solid var(--color-secondary);
+      font-size: 8em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // mobile screen
+      @media (max-width: 768px) {
+        height: 100px;
+        width: 100px;
+        font-size: 6em;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    // select first 3 children of game-table
+    > :nth-child(-n + 3) {
+      border-top-color: transparent;
+    }
+    // select last 3 children of game-table
+    > :nth-last-child(-n + 3) {
+      border-bottom-color: transparent;
+    }
+    // select first and every 3rd child of game-table
+    > :nth-child(3n + 1) {
+      border-left-color: transparent;
+    }
+    // select last and every 3rd child of game-table
+    > :nth-last-child(3n + 1) {
+      border-right-color: transparent;
+    }
+  }
+}
+.processing {
+  cursor: wait;
+  // none clickable
+  // pointer-events: none;
+  // opacity
+  opacity: 0.5;
+  // cursor
+}
+
+.game-table.game-over {
+  .game-box {
+    p {
+      opacity: 0.5;
+    }
+  }
+  .winned {
+    p {
+      opacity: 1;
+      animation-duration: 450ms;
+      animation-name: blink;
+      animation-iteration-count: 3;
+    }
+  }
+}
+// blinking animation
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.game-table.game-over.draw {
+  .game-box {
+    p {
+      animation-duration: 450ms;
+      animation-name: half-blink;
+      animation-iteration-count: 3;
+    }
+  }
+}
+// half blinking animation
+@keyframes half-blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

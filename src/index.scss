@@ -1,0 +1,32 @@
+// light mode
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #000;
+    --color-secondary: #fff;
+  }
+}
+// dark mode
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-primary: #fff;
+    --color-secondary: #000;
+  }
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:linear-gradient(160deg,#354d6a,#e7e5e5d0);
+
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: #ffffff;
+  }
+}

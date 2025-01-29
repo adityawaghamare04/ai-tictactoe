@@ -1,0 +1,39 @@
+.results-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2rem;
+
+  .result-box {
+    font-family: "Courier New", Courier, monospace;
+    h3 {
+      margin: 0;
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+
+  .reset-btn {
+    background-color: #fff;
+    color: #000;
+    min-width: 125px;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:active {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.level {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+    gap: 20px;
+    max-width: 460px;
+    flex-wrap: wrap;
+    @media screen and (max-width: 768px) {
+        max-width: 310px;
+    }
+
+    .level-btn {
+        background-color:#385271e3;
+        color: #fff;
+        min-width: 125px;
+        padding: 10px 20px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover,
+        &.active {
+            background-color: #e7e5e5d0;
+            color: #000;
+        }
+    }
+}
