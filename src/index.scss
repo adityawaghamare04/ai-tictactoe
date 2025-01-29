@@ -16,12 +16,16 @@
 
 
 body {
-  font-family: Arial, sans-serif;
+font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    
     background:linear-gradient(160deg,#354d6a,#e7e5e5d0);
+    margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
 
 
   h1 {
